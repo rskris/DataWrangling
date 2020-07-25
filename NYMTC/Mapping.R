@@ -70,7 +70,7 @@ bg_shp = bg_shp %>% left_join(f1, by = c("GEOID"))
 nymtc_shp = tm_shape(bg_shp) + tm_polygons(
   col = "da_p",
   style = "jenks",
-  palette = "RdYlGn",
+  palette = "-RdYlGn",
   title.col = "DA Mode Share"
 )
 tmap_mode("view")
@@ -80,8 +80,8 @@ print(nymtc_shp)
 nymtc_shp = tm_shape(bg_shp) + tm_polygons(
   col = "subway_p",
   style = "jenks",
-  palette = "RdYlGn",
-  title.col = "DA Mode Share"
+  palette = "-RdYlGn",
+  title.col = "Subway Mode Share"
 )
 tmap_mode("view")
 print(nymtc_shp)
